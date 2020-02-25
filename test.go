@@ -33,6 +33,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 			w.WriteHeader(http.StatusInternalServerError)
 		}
 	}
+
 	//Если наш запрос == Put или POST
 	if r.Method == "PUT" || r.Method == "POST" {
 		reqBody, err := ioutil.ReadAll(r.Body)
